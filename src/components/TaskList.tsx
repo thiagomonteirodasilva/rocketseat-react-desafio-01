@@ -32,13 +32,13 @@ export function TaskList() {
     //Marcando tarefa como concluída ou não
     tasks.map((task, index) => {
         if(id === task.id){
-          const newTasks = [...tasks];
+          const completeTask = [...tasks];
           if(task.isComplete === false){
-            newTasks[index].isComplete = true;
-            setTasks(newTasks);
+            completeTask[index].isComplete = true;
+            setTasks(completeTask);
           } else {
-            newTasks[index].isComplete = false;
-            setTasks(newTasks);
+            completeTask[index].isComplete = false;
+            setTasks(completeTask);
           }
         }
     })
